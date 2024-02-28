@@ -99,7 +99,7 @@ class CommonImageBlock(blocks.StructBlock):
         if self.alternative_title:
             return self.alternative_title
         else:
-            self.image.title
+            return self.image.title
 
     class Meta:
         icon = 'image'
@@ -165,6 +165,18 @@ class CommonInternalLink(blocks.StructBlock):
     class Meta:
         template = 'commonblocks/internal_link.html'
         icon = 'link'
+
+
+class CommonMailToLink(blocks.StructBlock):
+    """
+    Single Mailto Tile Block
+    """
+    mailto = blocks.EmailBlock(required=True)
+    title = blocks.CharBlock(required=True)
+
+    class Meta:
+        template = 'commonblocks/mailto_link.html'
+        icon = 'site'
 
 
 class CommonExternalLink(blocks.StructBlock):

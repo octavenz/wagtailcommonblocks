@@ -1,13 +1,11 @@
 from django.utils.safestring import mark_safe
-from django.utils.encoding import python_2_unicode_compatible
 
 try:
     from wagtail.core.rich_text import RichText, expand_db_html
-except:
+except ImportError:
     from wagtail.wagtailcore.rich_text import RichText, expand_db_html
 
 
-@python_2_unicode_compatible
 class SimpleRichText(RichText):
     """
     A custom simple RichText to avoid the <div class='richtext'></div>
