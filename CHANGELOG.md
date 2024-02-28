@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ...
 
+
+## [0.3] - 2024-02-28
+
+### Fixed
+
+- Compatability with Django 4.0. Fixes to remove deprecation warnings.
+
 ## [0.2] - 2020-05-16
 
 ### Fixed

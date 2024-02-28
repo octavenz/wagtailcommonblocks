@@ -4,7 +4,7 @@ from django import forms
 from django.apps import apps
 from django.utils.functional import cached_property
 from django.conf import settings
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from commonblocks.fields import SimpleRichTextArea
 from commonblocks.simple_rich_text import SimpleRichText
